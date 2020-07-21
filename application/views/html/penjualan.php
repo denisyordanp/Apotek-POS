@@ -391,18 +391,14 @@
 
                                         </div>
 
-                                        <?php 
-                                            if($this->session->userdata('seller')!=null){
-                                                echo '
-                                                <div class="form-group text-center">
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yakin-modal">Bayar</button>
-                                                </div>
-                                                
-                                            ';
-                                            }
-                                        ?>
-
                                         <div class="form-group text-center">
+                                            <?php 
+                                                if($this->session->userdata('seller')!=null){
+                                                    echo '
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yakin-modal">Bayar</button>
+                                                    ';
+                                                }
+                                            ?>
                                             <button class="btn btn-primary" type="button" onclick="printDiv('cobaDisini')">Print</button>
                                         </div> 
 

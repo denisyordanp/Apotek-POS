@@ -8,11 +8,6 @@ class Main extends CI_Controller{
         if(!$this->main_model->isLogin()) redirect(site_url());
     }
 
-    public function index(){
-        // $data['stock'] = $this->main_model->getStock();
-        // $this->load->view("html/penjualan", $data);
-    }
-
     public function supplier(){
         $data['suppliers'] = $this->main_model->getSupplier();
         $this->load->view("html/supplier", $data);
@@ -33,6 +28,9 @@ class Main extends CI_Controller{
 
     public function logout(){
         $this->session->unset_userdata('user');
+        $this->session->unset_userdata('discount');
+        $this->session->unset_userdata('purchase');
+        $this->session->unset_userdata('seller');
         redirect(base_url());
     }
 }
