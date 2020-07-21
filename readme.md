@@ -1,24 +1,22 @@
 ###################
-Apotek Mitra Wluya
+<b>Point Of Sales - Apotek</b>
 ###################
 
 Ini adalah proyek pembangunan sistem penjualan Apotek sederhana di Apotek Mitra Waluya, Padalarang
 
 ###################
-Fitur tersedia
+<b>Fitur tersedia</b>
 ###################
 
 *******************
-Login
-*******************
+<b>Login</b>
 
 Fungsi : Melakukan login user yang telah terdaftar.
 
 <a href="https://imgflip.com/i/48wjjg"><img src="https://i.imgflip.com/48wjjg.jpg" title="made at imgflip.com"/></a>
 
 **************************
-Penjualan
-**************************
+<b>Penjualan</b>
 
 Fungsi : 
 1. Penjualan 
@@ -27,18 +25,17 @@ Fungsi :
 - Mereset list penjualan produk
 - Melakukan print faktur penjualan
 - Melihat penjualan hari ini
+
 2. Stok barang
 - Melihat stok ketersediaan produk Obat
 
 *******************
-Supplier
-*******************
+<b>Supplier</b>
 
 Fungsi : Menambah data supplier produk Obat.
 
 ************
-Pembelian
-************
+<b>Pembelian</b>
 
 Fungsi :
 1. Riwayat
@@ -49,8 +46,7 @@ Fungsi :
 - Melakukan reset list pembelian produk obat ke supplier
 
 *******
-Laporan
-*******
+<b>Laporan</b>
 
 Fungsi :
 1. Penjualan
@@ -62,8 +58,7 @@ Fungsi :
 - Melakukan print laporan stok
 
 **********
-Pengaturan
-**********
+<b>Pengaturan</b>
 
 Fungsi :
 1. Data Master
@@ -74,3 +69,4 @@ Fungsi :
 
 2. Pengguna
 - Melakukan CRUD pengguna sistem
+**********
