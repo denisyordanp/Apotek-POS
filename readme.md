@@ -2,7 +2,12 @@
 <b>Point Of Sales - Apotek</b>
 ###################
 
-Ini adalah proyek pembangunan sistem penjualan Apotek sederhana di Apotek Mitra Waluya, Padalarang
+Ini adalah proyek pembangunan sistem penjualan Apotek sederhana di Apotek Mitra Waluya, Padalarang.
+
+Pengembangan sistem ini menggunakan :
+- Template design dari <a href="https://wrappixel.com">WrapPixel</a>
+- Framework Codeigniter 3.1.9
+- Database MySQL
 
 ###################
 <b>Fitur tersedia</b>
