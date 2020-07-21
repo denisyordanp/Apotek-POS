@@ -17,52 +17,60 @@ Fungsi : Melakukan login user yang telah terdaftar.
 <a href="https://imgflip.com/i/48wjjg"><img src="https://i.imgflip.com/48wjjg.jpg" title="made at imgflip.com"/></a>
 
 **************************
-Changelog and New Features
+Penjualan
 **************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+Fungsi : 
+1. Penjualan 
+- Menambah produk penjualan
+- Menambah diskon penjualan
+- Mereset list penjualan produk
+- Melakukan print faktur penjualan
+- Melihat penjualan hari ini
+2. Stok barang
+- Melihat stok ketersediaan produk Obat
 
 *******************
-Server Requirements
+Supplier
 *******************
 
-PHP version 5.6 or newer is recommended.
-
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+Fungsi : Menambah data supplier produk Obat.
 
 ************
-Installation
+Pembelian
 ************
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+Fungsi :
+1. Riwayat
+- Melihat riwayat detail pembelian produk obat
+
+2. Pembelian
+- Melakukan pembelian produk obat ke supplier
+- Melakukan reset list pembelian produk obat ke supplier
 
 *******
-License
+Laporan
 *******
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+Fungsi :
+1. Penjualan
+- Melihat laporan penjualan perbulan
+- Melakukan print laporan penjualan perbulan
 
-*********
-Resources
-*********
+2. Stok
+- Melihat laporan penjualan stok
+- Melakukan print laporan stok
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
+**********
+Pengaturan
+**********
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+Fungsi :
+1. Data Master
+- Produk (CRUD data master produk obat)
+- Golongan (CRUD data master golongan obat)
+- Satuan (CRUD data master satuan obat)
+- Perusahaan (CRUD data master perusahaan)
 
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+2. Pengguna
+- Melakukan CRUD pengguna sistem
