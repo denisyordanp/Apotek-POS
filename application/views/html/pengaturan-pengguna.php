@@ -77,7 +77,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.html">Anda dapat menambah, menghapus, dan merubah pengguna sistem pada menu ini</a>
+                                    <li class="breadcrumb-item">Anda dapat menambah, menghapus, dan merubah pengguna sistem pada menu ini
                                     </li>
                                 </ol>
                             </nav>
@@ -225,6 +225,9 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
+                                <form action="<?php echo base_url()?>laporan/printUser" method="POST">
+                                    <button class="btn btn-primary" style="float:right; margin-left:15px;" type="submit" > Print</button>
+                                </form>
                                 <button type="button" class="btn btn-primary" data-toggle="modal"
                                         data-target="#user-modal" style="float:right;">Tambah pengguna</button>
                                 <div class="table-responsive">

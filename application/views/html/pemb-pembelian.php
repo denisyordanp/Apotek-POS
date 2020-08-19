@@ -40,7 +40,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.html">Anda dapat melakukan pembelian produk kepada supplier untuk menambah stok produk</a>
+                                    <li class="breadcrumb-item">Anda dapat melakukan pembelian produk kepada supplier untuk menambah stok produk
                                     </li>
                                 </ol>
                             </nav>

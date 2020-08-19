@@ -29,7 +29,7 @@ class MPenjualan extends CI_Model
       return $this->db->get()->result();
     }
 
-    public function getSellesProductPeriod($start, $end){
+    public function getSellesProductPeriod($start, $end, $produk, $id){
       $this->db->select('*');
       $this->db->from($this->penjualanProduct);
       $this->db->join($this->penjualan, 'penjualan.id_penjualan = penjualan_produk.id_penjualan');
@@ -37,6 +37,12 @@ class MPenjualan extends CI_Model
       $this->db->join($this->product, 'penjualan_produk.id_produk = produk.id_produk');
       $this->db->join($this->golongan, 'produk.id_golongan = golongan_obat.id_golongan');
       $this->db->join($this->satuan, 'produk.id_satuan = satuan_obat.id_satuan');
+      if(!empty($produk)){
+        $this->db->where('penjualan_produk.id_produk', $produk);
+      }
+      if(!empty($id)){
+        $this->db->where('penjualan.id_penjualan', $id);
+      }
       $this->db->where('tanggal_penjualan >=', $start);
       $this->db->where('tanggal_penjualan <', $end);
       $this->db->order_by('penjualan.id_penjualan');
@@ -47,8 +53,10 @@ class MPenjualan extends CI_Model
       $this->db->select('*');
       $this->db->from($this->penjualan);
       $this->db->join($this->users, 'users.user_id = penjualan.user_id');
-      $this->db->where('tanggal_penjualan >=', $date);
-      $this->db->where('tanggal_penjualan <', $dateNext);
+      if(!empty($date) && !empty($dateNext)){
+        $this->db->where('tanggal_penjualan >=', $date);
+        $this->db->where('tanggal_penjualan <', $dateNext);
+      }
       return $this->db->get()->result();
     }
 

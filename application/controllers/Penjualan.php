@@ -33,7 +33,7 @@ class Penjualan extends CI_Controller{
 
     private function calculateStock(){
         $product = $this->MPenjualan->getProduct();
-        $purchase = $this->MPembelian->getPurchaseProduct();
+        $purchase = $this->MPembelian->getPurchaseProduct("","","","");
         $salles = $this->MPenjualan->getSellesProduct();
         foreach($product as $key => $index1){
             $id = $index1->id_produk;

@@ -30,12 +30,6 @@ class Pembelian extends CI_Controller{
         $this->load->view("html/pemb-pembelian", $data);
     }
 
-    public function riwayat(){
-        $data['purchase'] = $this->MPembelian->getPurchase();
-        $data['purchaseProduct'] = $this->MPembelian->getPurchaseProduct();
-        $this->load->view("html/pemb-riwayat", $data);
-    }
-
     public function addProduct(){
         $post = $this->input->post();
         $arr = [];
@@ -79,6 +73,5 @@ class Pembelian extends CI_Controller{
         $this->session->unset_userdata('purchase');
         redirect(site_url('pembelian/pembelian'));
     }
-
 }
 ?>

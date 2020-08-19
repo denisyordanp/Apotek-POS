@@ -38,7 +38,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.html">Anda dapat menambah data master <b>Satuan Obat</b> sebelum menggunakan sistem</a>
+                                    <li class="breadcrumb-item">Anda dapat menambah data master <b>Satuan Obat</b> sebelum menggunakan sistem
                                     </li>
                                 </ol>
                             </nav>
@@ -80,11 +80,41 @@
                     </div>
                 </div>
 
+                <?php 
+                    foreach($unit as $index){
+                        echo '
+                        <div id="delete'.$index->id_satuan.'" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content modal-filled bg-danger">
+                                    <div class="modal-body p-4">
+                                        <div class="text-center">
+                                            <i class="dripicons-wrong h1"></i>
+                                            <h4 class="mt-2">Peringatan!</h4>
+                                            <p class="mt-3">Anda yakin akan menghapus golongan '.$index->satuan.'?</p>
+                                            
+                                            <form action="'.base_url().'master/deleteUnit" method="POST">
+                                                <input value="'.$index->id_satuan.'" name="id_satuan" hidden>
+                                                <button type="button" class="btn btn-light my-2"
+                                                data-dismiss="modal">Batal</button>
+                                                <button type="submit" class="btn btn-light my-2">Ya</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        ';
+                    }
+                ?>
+
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                <form action="<?php echo base_url()?>laporan/printUnit" method="POST">
+                                    <button class="btn btn-primary" style="float:right; margin-left:15px;" type="submit" > Print</button>
+                                </form>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#satuan-modal" style="float:right;">Tambah satuan</button>
                                 <div class="table-responsive">
                                     <table id="unitTable" class="table table-striped table-bordered no-wrap table-hover">
@@ -98,7 +128,7 @@
                                             <?php 
                                                 $no = 1;
                                                 foreach($unit as $index){
-                                                    echo "<tr class='clickable-row' data-toggle='modal' data-target='#hpUnit".$index->id_satuan."'>
+                                                    echo "<tr class='clickable-row' data-toggle='modal' data-target='#delete".$index->id_satuan."'>
                                                     <td>".$no.".</td>
                                                     <td>".$index->satuan."</td>
                                                     </tr>";

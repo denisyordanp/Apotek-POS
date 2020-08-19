@@ -38,7 +38,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.html">Anda dapat menambah data master <b>Produk Obat</b> sebelum menggunakan sistem</a>
+                                    <li class="breadcrumb-item">Anda dapat menambah data master <b>Produk Obat</b> sebelum menggunakan sistem
                                     </li>
                                 </ol>
                             </nav>
@@ -122,7 +122,10 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                <form action="<?php echo base_url()?>laporan/printProduct" method="POST">
+                                    <button class="btn btn-primary" style="float:right; margin-left:15px;" type="submit" > Print</button>
+                                </form>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#produk-modal" style="float:right;">Tambah produk</button>
                                 <div class="table-responsive">
                                     <table id="productTable" class="table table-striped table-bordered no-wrap table-hover">

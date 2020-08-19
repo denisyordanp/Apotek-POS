@@ -46,7 +46,8 @@
                                     <h5>Telp. <?php echo $company['0']->telp_perusahaan?></h5>
                                 </div>
                                 <hr></hr>
-                                <h3 style="text-align:center;"><b>Laporan Stok Obat Periode <?php echo $date['date']?></b></h3>
+                                <h3 style="text-align:center;"><b>Laporan Penjualan Obat Periode</b></h3>
+                                <h4 style="text-align:center;"><b><?php echo $date['date_from'].' Sampai '.$date['date_until']?> </b></h4>
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered no-wrap">
                                         <thead>
@@ -67,10 +68,6 @@
                                                 $id = 0;
                                                 $total = 0;
                                                 foreach($salles as $index){
-                                                    $idThis = $index->id_penjualan;
-                                                    if($id == $idThis){
-                                                        $idThis = "";
-                                                    }
                                                     $potongan = 0;
                                                     if($index->diskon!=0){
                                                         if($index->tipe_diskon=='persen'){
@@ -86,7 +83,7 @@
                                                         <tr>
                                                             <td>".$no.".</td>
                                                             <td>".date('d/m/Y', strtotime($index->tanggal_penjualan))."</td>
-                                                            <td>".$idThis."</td>
+                                                            <td>".$index->id_penjualan."</td>
                                                             <td>".$index->nama_produk."</td>
                                                             <td><b>".$index->penjualan." ".$index->satuan."</b></td>
                                                             <td>Rp. ".number_format($index->harga_jual)."</td>
@@ -95,7 +92,6 @@
                                                         </tr>
                                                     ";
                                                     $no++;
-                                                    $id = $idThis;
                                                     $total = $total + $subtotal;
                                                 }
 

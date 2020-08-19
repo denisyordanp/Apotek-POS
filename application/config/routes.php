@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'login';
 $route['main/(:any)'] = 'main/$1';
+$route['supplier/(:any)'] = 'supplier/$1';
 $route['pengguna/(:any)'] = 'pengguna/$1';
 $route['master/(:any)'] = 'master/$1';
 $route['laporan/(:any)'] = 'laporan/$1';
