@@ -13,6 +13,44 @@ class Laporan extends CI_Controller{
         if(!$this->main_model->isLogin()) redirect(site_url());
     }
 
+    public function setGrafikPeriod(){
+        $post = $this->input->post();
+        $data = [
+            'from' => $post['from'],
+            'until' => $post['until']
+        ];
+        $this->session->set_flashdata('period', $data);
+        redirect(site_url('laporan/grafik'));
+    }
+
+    public function grafik(){
+        $period = $this->session->flashdata('period');
+        if($period!=null){
+            $from = $period['from'];
+            $until = $period['until'];
+            $data['date'] = [
+                'date_from' => date('d', strtotime($from)).' '.$this->getdate(date('m', strtotime($from)), date('Y', strtotime($until))),
+                'date_until' => date('d', strtotime($until)).' '.$this->getdate(date('m', strtotime($until)), date('Y', strtotime($until))),
+                'from' => $from,
+                'until' => $until
+            ];
+            $start = $from;
+            $end = $until;
+        }else{
+            $now = date('Y-m-01');
+            $data['date'] = [
+                'date_from' => '01 '.$this->getdate(date('m'), date('Y')),
+                'date_until' => '01 '.$this->getdate(date('m', strtotime('+1 month')), date('Y', strtotime('+1 month'))),
+                'from' => $now,
+                'until' => date('Y-m-01', strtotime($now.'+1 month')),
+            ];
+            $start = $now;
+            $end = date('Y-m-01', strtotime($now.' +1 month'));
+        }
+        $data['salles'] = $this->MPenjualan->getSellesProductPeriodForGrafik($start, $end);
+        $this->load->view("html/grafik", $data);
+    }
+
     public function stok(){
         $data['stok'] = $this->calculateStock();
         $data['date'] = $this->getdate(date('m'), date('Y'));

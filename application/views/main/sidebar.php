@@ -17,12 +17,16 @@
                 aria-expanded="false"><i class="fas fa-clipboard"></i><span
                     class="hide-menu">Laporan </span></a>
             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                <li class="sidebar-item"><a href="<?php echo base_url()?>laporan/pembelian" class="sidebar-link"><span
-                            class="hide-menu"> Pembelian
+            <li class="sidebar-item"><a href="<?php echo base_url()?>laporan/grafik" class="sidebar-link"><span
+                            class="hide-menu"> Grafik Penjualan
                         </span></a>
                 </li>
                 <li class="sidebar-item"><a href="<?php echo base_url()?>laporan/penjualan" class="sidebar-link"><span
                             class="hide-menu"> Penjualan
+                        </span></a>
+                </li>
+                <li class="sidebar-item"><a href="<?php echo base_url()?>laporan/pembelian" class="sidebar-link"><span
+                            class="hide-menu"> Pembelian
                         </span></a>
                 </li>
                 <li class="sidebar-item"><a href="<?php echo base_url()?>laporan/stok" class="sidebar-link"><span

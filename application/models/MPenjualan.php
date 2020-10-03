@@ -49,6 +49,17 @@ class MPenjualan extends CI_Model
       return $this->db->get()->result();
     }
 
+    public function getSellesProductPeriodForGrafik($start, $end){
+      $this->db->select('*');
+      $this->db->from($this->penjualanProduct);
+      $this->db->join($this->penjualan, 'penjualan.id_penjualan = penjualan_produk.id_penjualan');
+      $this->db->join($this->product, 'penjualan_produk.id_produk = produk.id_produk');
+      $this->db->where('tanggal_penjualan >=', $start);
+      $this->db->where('tanggal_penjualan <', $end);
+      $this->db->order_by('produk.id_produk');
+      return $this->db->get()->result();
+    }
+
     public function getSelles($date, $dateNext){
       $this->db->select('*');
       $this->db->from($this->penjualan);
