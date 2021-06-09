@@ -1,6 +1,4 @@
-###################
-<b>Point Of Sales - Apotek</b>
-###################
+<h1>Point Of Sales - Apotek</h1>
 
 Ini adalah proyek pembangunan sistem penjualan Apotek sederhana di Apotek Mitra Waluya, Padalarang.
 
@@ -10,8 +8,7 @@ Pengembangan sistem ini menggunakan :
 - Database MySQL
 
 ###################
-<b>Fitur tersedia</b>
-###################
+<h3>Fitur tersedia</h3>
 
 *******************
 <b>Login</b>
