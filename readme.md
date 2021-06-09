@@ -1,13 +1,13 @@
 <h1>Point Of Sales - Apotek</h1>
 
-Ini adalah proyek pembangunan sistem penjualan Apotek sederhana di Apotek Mitra Waluya, Padalarang.
+Proyek Sistem POS sederhana di Apotek Mitra Waluya, Padalarang, Jawa Barat, Indonesia.
 
 Pengembangan sistem ini menggunakan :
 - Template design dari <a href="https://wrappixel.com">WrapPixel</a>
 - Framework Codeigniter 3.1.9
 - Database MySQL
 
-###################
+
 <h3>Fitur tersedia</h3>
 
 *******************
@@ -17,7 +17,6 @@ Fungsi : Melakukan login user yang telah terdaftar.
 
 <a href="https://imgflip.com/i/48wjjg"><img src="https://i.imgflip.com/48wjjg.jpg" title="made at imgflip.com"/></a>
 
-**************************
 <b>Penjualan</b>
 
 Fungsi : 
